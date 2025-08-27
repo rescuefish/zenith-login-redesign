@@ -6,19 +6,15 @@ interface FeatureCardProps {
   title: string;
   description: string;
   className?: string;
-  onClick?: () => void;
 }
 
-const FeatureCard = ({ icon: Icon, title, description, className = '', onClick }: FeatureCardProps) => {
+const FeatureCard = ({ icon: Icon, title, description, className = '' }: FeatureCardProps) => {
   return (
-    <div 
-      className={`group relative cursor-pointer ${className}`}
-      onClick={onClick}
-    >
+    <div className={`group relative ${className}`}>
       {/* Gradient border effect */}
       <div className="absolute inset-0 bg-gradient-emerald rounded-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
       
-      <div className="relative bg-gradient-card rounded-xl p-6 border border-border/50 backdrop-blur-sm transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-card-hover h-full">
+      <div className="relative bg-gradient-card rounded-xl p-6 border border-border/50 backdrop-blur-sm transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-card-hover">
         <div className="flex items-start gap-4">
           <div className="flex-shrink-0">
             <div className="w-12 h-12 bg-gradient-emerald rounded-lg flex items-center justify-center shadow-glow">
